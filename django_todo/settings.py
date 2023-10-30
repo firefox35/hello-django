@@ -31,7 +31,8 @@ SECRET_KEY = 'django-insecure-*9q4-i!un)8$fzgsk1z^b@k7339d_kf_fdr+zc)j!-%26ki1ju
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-firefox35-hello-django-0qlf88b612.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['8000-firefox35-hello-django-0qlf88b612.us2.codeanyapp.com',
+                 'django-hello-app-e79092211e90.herokuapp.com']
 
 
 # Application definition
