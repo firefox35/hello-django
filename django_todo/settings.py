@@ -26,12 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*9q4-i!un)8$fzgsk1z^b@k7339d_kf_fdr+zc)j!-%26ki1ju'
+SECRET_KEY = os.environ.get('SECRET_KEY','django-insecure-*9q4-i!un)8$fzgsk1z^b@k7339d_kf_fdr+zc)j!-%26ki1ju')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-firefox35-hello-django-0qlf88b612.us2.codeanyapp.com',
+ALLOWED_HOSTS = ['8000-firefox35-hello-django-0qlf88b612.us2.codeanyapp.com',os.environ.get('HEROKU_HOSTNAME')
                  'django-hello-app-e79092211e90.herokuapp.com']
 
 
@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://wbrgpgct:rgWw8Qb9CE35f3Kx8xIkRbWacKAJgLme@flora.db.elephantsql.com/wbrgpgct')
+    'default': dj_database_url.parse(os.environ.get('DATEBASE_URL'))'postgres://wbrgpgct:rgWw8Qb9CE35f3Kx8xIkRbWacKAJgLme@flora.db.elephantsql.com/wbrgpgct')
 }
 
 # Password validation
